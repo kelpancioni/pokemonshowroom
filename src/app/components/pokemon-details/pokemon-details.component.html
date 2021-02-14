@@ -1,0 +1,18 @@
+<div class="container">
+  <img [src]="pokemonDetails?.sprites.front_default || pokemonDetails?.sprites.other['official-artwork'].front_default">
+  <p>{{pokemonDetails?.name | titlecase}}</p>
+
+  Habilidades:
+  <ul>
+    <li *ngFor="let abilities of pokemonDetails?.abilities">
+      {{abilities.ability.name | titlecase}}
+    </li>
+  </ul>
+
+  Tipo:
+  <ul>
+    <li *ngFor="let types of pokemonDetails?.types">
+      {{types.type.name | titlecase}}
+    </li>
+  </ul>
+</div>

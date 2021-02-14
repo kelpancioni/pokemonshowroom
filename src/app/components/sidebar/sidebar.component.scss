@@ -1,0 +1,23 @@
+.wrapper{
+  display: block;
+  height: 100vh;
+  overflow-y: scroll;
+  background: white;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+li a:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}

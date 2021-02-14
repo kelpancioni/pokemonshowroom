@@ -1,0 +1,12 @@
+<label>Buscar</label>
+<input [formControl]="searchPokemon" placeholder="Digite o nome do Pokémon">
+<div class="wrapper">
+  <ul>
+    <li *ngFor="let pokemon of filteredPokemonList || pokemonList">
+      <a [routerLink]="pokemon.url">{{pokemon.name | titlecase}}</a>
+    </li>
+    <li *ngIf="next && !filteredPokemonList?.length">
+      <a (click)="loadMore()">Carregar mais...</a>
+    </li>
+  </ul>
+</div>
